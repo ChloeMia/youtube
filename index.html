@@ -22,31 +22,29 @@
 			function run(){				
 				var x=document.getElementById('obj');
 				var y=document.getElementById('obj1');
+				allX = document.body.clientWidth;
+				allY = document.body.clientHeight;
+				var temp = 1000;
+				temp = temp - 1;
 				currentX=parseInt(x.style.left);
-				currentY=parseInt(y.style.top);
 				if(currentX == allX){
 					step=-1;
 				}
 				if(currentX == 0){
 					step=1;
 				}
-				if(currentY == allX){
-					step=-1;
-				}
-				if(currentY == 0){
-					step=1;
+				if(temp == 0){
+					temp = 1000;
+					y.style.left=rand(allX);
+					y.style.top=rand(allY);
 				}
 				x.style.left=parseInt(x.style.left)+step+'px';
-				y.style.top=parseInt(y.style.top)+step+'px';
 				setTimeout('run()',10);
 			}
 	</script>
 </head>
 <body onload="init()" style="width:500px;height:500px">
     <div class = "gg">
-	<div>
-		<img id="obj1" src="first.jpg" alt="">
-	</div>
         <div id="obj" style="position:absolute;top:100px;left:0px">
             <img src="first.jpg" alt="">
             <img src="test.png" alt="">
@@ -55,10 +53,15 @@
         </div>
     </div>
     <div class = "gg">
+        <div id="obj1" style="position:absolute;top:100px;left:0px">
+            <img src="first.jpg" alt="">
+            <img src="test.png" alt="">
+            <img src="test.png" alt="">
+            <img class="te" src="ggg.jpg" alt="">
+        </div>
+    </div>
+    <div id="obj1">
         <img src="test.png" alt="">
-        <img src="test.png" alt="">
-        <img src="test.png" alt="">
-        <img class="te" src="ggg.jpg" alt="">
     </div>
     <div class = "gg">
         <img src="test.png" alt="">
