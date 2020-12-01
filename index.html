@@ -13,6 +13,7 @@
 			function init(){
 				allX = document.body.clientWidth;
 				allY = document.body.clientHeight;
+				temp = 100;
 				var x=document.getElementById('obj');
 				x.style.left=rand(allX)+'px';
 				x.style.top=rand(allY)+'px';
@@ -22,9 +23,6 @@
 			function run(){				
 				var x=document.getElementById('obj');
 				var y=document.getElementById('obj1');
-				allX = document.body.clientWidth;
-				allY = document.body.clientHeight;
-				var temp = 100;
 				temp = temp - 1;
 				currentX=parseInt(x.style.left);
 				if(currentX == allX){
